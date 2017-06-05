@@ -44,7 +44,6 @@ public class Deck
 
 	public Card dealOneCard()
 	{
-		shuffle();
 		if(cards.size() >= 0)
 		{
 			return cards.remove(0);
