@@ -1,0 +1,12 @@
+// Makes gradle use Java default preset
+apply plugin: "java"
+
+// Add src/main path to directory
+sourceSets {
+	main.java.srcDir("src/main")
+}
+// Configures the jar task
+// uses the 'attributes' function to set a 'Main-Class' to 'Main'
+jar {
+	manifest.attributes "Main-Class": "Main"
+}
