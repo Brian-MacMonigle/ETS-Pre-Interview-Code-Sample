@@ -1,6 +1,6 @@
 public class Card
 {
-	public static final String[] suits = {"Diamond", "Heart", "Spade", "Club"};
+	public static final String[] suits = {"diamonds", "hearts", "spades", "clubs"};
 
 	public static final int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
 
@@ -35,10 +35,12 @@ public class Card
 	// Clean way to print the card
 	public String toString()
 	{
-		if(number > 10)
+		if(number > 10 || number == 1)
 		{
 			switch(number)
 			{
+				case 1:
+					return "Ace of " + suit;
 				case 11:
 					return "Jack of " + suit;
 				case 12:
